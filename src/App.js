@@ -1,23 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import List from './list';
+import { useEffect,useState } from 'react';
 
 function App() {
+
+  const [data,setData] = useState()
+
+  useEffect(()=>{
+     let list = [
+      {
+        name:"ganesh",
+        email:"ganesh@gmail.com",
+        phone:"2345678",
+        age:"24"
+      },
+      {
+        name:"mahesh",
+        email:"mahesh@gmail.com",
+        phone:"987654",
+        age:"26"
+      }
+     ]
+     setData(list)
+
+  },[])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h2>users</h2>
+     <div>
+         
+     </div>
+
     </div>
   );
 }
